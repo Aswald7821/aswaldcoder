@@ -1,0 +1,17 @@
+class Solution(object):
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+l=[]
+
+    for i in range(len(nums)-1):
+        t = target - nums[i]
+        
+        
+        if t in nums[i+1:]:
+            nums[i] = -1000
+            l.append(i)
+            ind2 = nums.index(t)
+            l.append(ind2)
+            break
+            
+    return l
+        
